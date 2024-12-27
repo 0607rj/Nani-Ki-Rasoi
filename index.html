@@ -6,6 +6,7 @@
   <meta name="description" content="Nani Ki Rasoi - Hostel Mess for Home-Cooked Meals">
   <title>Nani Ki Rasoi - Hostel Mess</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/media.css"> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body>
@@ -17,38 +18,25 @@
         <h3>NANI KI RASOI</h3>
       </div>
       <ul class="tag">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="index.html">Home</a></li> <!-- Home Link -->
+        <li><a href="about.html">About</a></li> <!-- Correct Link for About Page -->
         <li><a href="#services">Services</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
-  
 
   <!-- Home Section -->
   <section id="home" class="hero">
     <div class="hero-content">
-        <h1>Still Hungry ?</h1>
+      <h1>Still Hungry?</h1>
       <h2>Welcome to Nani Ki Rasoi</h2>
       <p>Authentic Home-Cooked Meals Just Like Grandma's Kitchen</p>
-      <!-- <button onclick="window.location.href='#gallery'">View Gallery</button> -->
     </div>
   </section>
 
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We offer home-cooked meals that bring you the warmth and comfort of a family kitchen. Nani Ki Rasoi is a place where you feel at home, no matter where you are.</p>
-    <div class="owner-info">
-      <h3>Meet the Owner</h3>
-      <img src="owner.jpg" alt="Owner Image" />
-      <p>Our founder, [Owner's Name], started Nani Ki Rasoi to bring a taste of home to everyone. It's all about love, care, and delicious food!</p>
-    </div>
-  </section>
-
-  
+  <!-- Services Section -->
   <section id="services">
     <h2>Our Services</h2>
     <ul>
@@ -59,14 +47,14 @@
     </ul>
   </section>
 
-  
+  <!-- Gallery Section -->
   <section id="gallery">
     <h2>Gallery</h2>
     <button class="upload-btn" onclick="openUpload()">Upload Photo/Video</button>
     <div id="image-gallery" class="gallery"></div>
   </section>
 
-  
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <form id="contact-form">
@@ -77,7 +65,7 @@
     </form>
   </section>
 
-
+  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Nani Ki Rasoi. All rights reserved.</p>
     <div class="social-links">
@@ -88,4 +76,4 @@
 
   <script src="script.js"></script>
 </body>
-</html> 
+</html>

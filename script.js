@@ -1,42 +1,23 @@
-// GSAP Animation for smooth scrolling
 window.addEventListener("DOMContentLoaded", function () {
+
+    // GSAP Animation for smooth scrolling (on the current page)
     gsap.from(".hero h1", { opacity: 0, y: -50, duration: 1 });
     gsap.from(".hero p", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
     gsap.from("section", { opacity: 0, duration: 1, stagger: 0.3, delay: 1 });
   
-    // Image Gallery Animation
-    const gallery = document.getElementById("image-gallery");
-  
-    // Simple image upload simulation
-    function openUpload() {
-      let input = document.createElement('input');
-      input.type = 'file';
-      input.accept = 'image/*,video/*';
-      input.multiple = true;
-      input.click();
-  
-      input.onchange = function (event) {
-        let files = event.target.files;
-        for (let i = 0; i < files.length; i++) {
-          let file = files[i];
-          let reader = new FileReader();
-          reader.onload = function (e) {
-            let newImage = document.createElement('img');
-            newImage.src = e.target.result;
-            gallery.appendChild(newImage);
-          };
-          reader.readAsDataURL(file);
-        }
-      };
-    }
-  
-    // Smooth Scroll for Navigation
+    // Smooth Scroll for Navigation (ONLY for sections on the same page)
     document.querySelectorAll("nav ul li a").forEach(anchor => {
       anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
-        });
+        // Check if the link is an internal page link (like to about.html)
+        if (this.getAttribute("href") !== "about.html") {
+          e.preventDefault(); // Prevent default if it's scrolling within the current page
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        } else {
+          // Allow normal navigation for external or page-changing links (like about.html)
+          window.location.href = this.getAttribute("href");
+        }
       });
     });
   
@@ -44,7 +25,19 @@ window.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      alert("Your message has been sent!");
+  
+      // Form Validation (Example: Check for empty fields)
+      const name = form.querySelector('input[name="name"]');
+      const email = form.querySelector('input[name="email"]');
+      const message = form.querySelector('textarea[name="message"]');
+  
+      if (name.value.trim() === "" || email.value.trim() === "" || message.value.trim() === "") {
+        alert("Please fill out all fields.");
+      } else {
+        // Simulate successful form submission
+        alert("Your message has been sent!");
+        form.reset(); // Reset form fields after submission
+      }
     });
   });
   
