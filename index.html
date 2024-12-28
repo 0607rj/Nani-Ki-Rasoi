@@ -18,21 +18,52 @@
         <h3>NANI KI RASOI</h3>
       </div>
       <ul class="tag">
-        <li><a href="index.html">Home</a></li> <!-- Home Link -->
-        <li><a href="about.html">About</a></li> <!-- Correct Link for About Page -->
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Home Section -->
-  <section id="home" class="hero">
+  <div id="home" class="hero">
     <div class="hero-content">
       <h1>Still Hungry?</h1>
       <h2>Welcome to Nani Ki Rasoi</h2>
       <p>Authentic Home-Cooked Meals Just Like Grandma's Kitchen</p>
+    </div>
+  </div>
+
+  <!-- Who We Are Section -->
+  <section id="who-we-are" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Who We Are</h2>
+        <p>Your Home Away From Home</p>
+      </div>
+
+      <div class="section-content">
+        <div class="intro-text">
+          <p><strong>Welcome to Nani Ki Rasoi!</strong> We are a mess that specializes in providing nutritious, affordable, and homely food for students who are studying away from their families. At Nani Ki Rasoi, we believe in the warmth of home-cooked meals and aim to bring that same comfort to your table every day.</p>
+          <p>Our mission is simple: to provide meals that make you feel like you're eating at your grandmother’s place — hearty, healthy, and prepared with love. Whether it's a delicious dal, comforting sabzi, or freshly made roti, our food is designed to remind you of home.</p>
+        </div>
+
+        <div class="values">
+          <h3>Our Core Values</h3>
+          <ul>
+            <li><strong>Homely Taste:</strong> We make food just like your grandmother would — full of love and care.</li>
+            <li><strong>Affordable Prices:</strong> Quality food doesn't have to be expensive. We keep our prices student-friendly!</li>
+            <li><strong>Fresh & Nutritious:</strong> We focus on using fresh ingredients to ensure your meals are both healthy and tasty.</li>
+            <li><strong>Warmth & Comfort:</strong> More than just food, we aim to create a place that feels like home for students away from family.</li>
+          </ul>
+        </div>
+
+        <div class="cta">
+          <p>Craving a home-cooked meal? <a href="#contact">Order Now!</a></p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -45,24 +76,6 @@
       <li>Group Meal Packages</li>
       <li>Pre-Booking Available</li>
     </ul>
-  </section>
-
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <button class="upload-btn" onclick="openUpload()">Upload Photo/Video</button>
-    <div id="image-gallery" class="gallery"></div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
   </section>
 
   <!-- Footer -->
