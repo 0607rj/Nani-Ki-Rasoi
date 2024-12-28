@@ -272,7 +272,8 @@ footer .social-links a:hover {
   }
 
   .hero-content {
-    margin-left: 0;
+    margin-right: 0px;
+    padding-left: 30px;
   }
 
   .hero h1 {
