@@ -63,16 +63,15 @@ nav .logo h3 {
   background-position: center;
   height: 100vh;
   color: rgb(5, 5, 5);
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
 .hero-content {
+  text-align: left;
+  padding-left: 90px;
   padding-top: 250px;
-  margin-left: 90px;
-  justify-content: left;
-  /* text-align: center; */
-
-  
-  
 }
 
 .hero h1 {
@@ -273,7 +272,6 @@ footer .social-links a:hover {
   }
 
   .hero-content {
-    /* margin-top: 100px; */
     margin-left: 0;
   }
 
@@ -352,5 +350,10 @@ footer .social-links a:hover {
   #who-we-are .cta a {
     font-size: 16px;
     padding: 10px 20px;
+  }
+
+  /* Footer adjustments */
+  footer {
+    padding: 15px;
   }
 }
