@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mess Gallery - Nani Ki Rasoi</title>
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h3>NANI KI RASOI</h3>
+      </div>
+      <ul class="tag">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Upload Memories Section -->
+    <section id="upload-section" class="card">
+      <h2>Upload Memories</h2>
+      <p>Share your moments by uploading photos or videos.</p>
+      <form id="upload-form">
+        <input type="file" id="file-input" accept="image/*,video/*" required />
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery-section" class="card">
+      <h2>Gallery</h2>
+      <p>Browse through the moments shared by our community.</p>
+      <div id="gallery" class="gallery-grid">
+        <!-- Uploaded content will appear here -->
+      </div>
+    </section>
+
+    <!-- Memories Section -->
+    <section id="memories-section" class="card">
+      <h2>Memories</h2>
+      <p>Write about your experiences and save them for everyone to see.</p>
+      <textarea id="memories-text" placeholder="Share your thoughts or memories..."></textarea>
+      <button id="save-memories">Save Memories</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Nani Ki Rasoi. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
