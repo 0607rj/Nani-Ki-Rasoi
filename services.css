@@ -1,4 +1,7 @@
-/* General styles */
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9;
@@ -7,41 +10,6 @@ body {
     padding: 0;
   }
   
-  /* header {
-    background-color: #FF5722;
-    padding: 20px 0;
-  }
-  
-  header nav .logo h3 {
-    color: white;
-    text-align: center;
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  header nav .tag {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header nav .tag li {
-    margin: 0 20px;
-  }
-  
-  header nav .tag li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  header nav .tag li a:hover,
-  header nav .tag li a.active {
-    text-decoration: underline;
-  }
-   */
   .hero {
     background-color: #FFEB3B;
     padding: 60px 20px;
@@ -85,6 +53,9 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+  header{
+    border-bottom: 2px solid black;
+}
   
   .service-card img {
     max-width: 250px;
@@ -107,7 +78,6 @@ body {
     color: #555;
   }
   
-  /* Footer */
   footer {
     background-color: #333;
     color: white;
@@ -133,4 +103,184 @@ body {
     width: 24px;
     height: 24px;
   }
+    /* Hamburger Menu */
+.hamburger {
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  margin-top:10 ;
+}
+.nav{
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+
+}
+.hamburger .line {
+  width: 35px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+
+}
+.hamburger.active span:nth-child(1){
+  position: absolute;
+  transform: rotate(45deg);
+}
+.hamburger.active span:nth-child(2){
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3){
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.off-screen-menu {
+  background-color:rgba(200, 231, 231, 0.707); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  gap: 10px;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  transition: 0.3s ease;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+.off-screen-menu a{
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-weight: 500;
+}
+.off-screen-menu ul li{
+  list-style: none;
+}
+
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 24px;
+  }
   
+  .hero p {
+    font-size: 14px;
+  }
+  
+  .services-section h2 {
+    font-size: 22px;
+  }
+  
+  .services-section p {
+    font-size: 14px;
+  }
+  
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .service-card img {
+    margin: 0 0 15px 0;
+    max-width: 100%;
+  }
+  
+  .service-card .service-text {
+    text-align: center;
+  }
+  
+  footer .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .off-screen-menu {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+  }
+  
+  .services-section h2 {
+    font-size: 24px;
+  }
+  
+  .services-section p {
+    font-size: 15px;
+  }
+  
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .service-card img {
+    max-width: 80%;
+    margin: 0 0 15px 0;
+  }
+  
+  .service-card .service-text {
+    text-align: center;
+  }
+
+  .off-screen-menu {
+    font-size: 1.75rem;
+  }
+}
+
+
+@media (min-width: 901px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+  }
+  
+  .services-section h2 {
+    font-size: 28px;
+  }
+  
+  .services-section p {
+    font-size: 16px;
+  }
+  
+  .service-card {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .service-card img {
+    max-width: 250px;
+    margin-right: 20px;
+  }
+  
+  .service-card .service-text {
+    text-align: left;
+  }
+}

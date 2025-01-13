@@ -1,4 +1,4 @@
-/* Reset styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +8,14 @@
   body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8;
-    /* line-height: 1.6; */
+  
   }
   
   h2 {
     text-align: center;
     color: #ff8a00;
     font-size: 2.5rem;
-    /* margin-top: 50px; */
+   
   }
   
   h3 {
@@ -25,7 +25,7 @@
     text-align: center;
   }
   
-  /* About Us Content */
+ 
   .about-content {
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@
     margin: 0 auto;
     padding: 20px;
     gap: 20px;
-    flex-wrap: wrap; /* Added this for responsiveness */
+    flex-wrap: wrap; 
   }
   
   .about-content .text {
@@ -42,6 +42,8 @@
     font-size: 1.1rem;
     color: #666;
     padding: 0 20px;
+    padding-top: 100px;
+    
   }
   
   .about-content .owner-info {
@@ -51,6 +53,9 @@
     text-align: center;
     padding-top: 0;
   }
+  header{
+    border-bottom: 2px solid black;
+}
   
   .about-content img {
     width: 100%;
@@ -58,17 +63,87 @@
     border-radius: 8px;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: 0; /* Fixed the margin to be responsive */
+    margin-left: 0; 
   }
   
   .owner-info p {
     margin-top: 20px;
   }
+  /* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  margin-top:10 ;
+}
+.nav{
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+
+}
+.hamburger .line {
+  width: 35px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+
+}
+.hamburger.active span:nth-child(1){
+  position: absolute;
+  transform: rotate(45deg);
+}
+.hamburger.active span:nth-child(2){
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3){
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.off-screen-menu{
+  background-color: rgba(200, 231, 231, 0.707);
+  height: 100vh;
+  width: 100%;
+  max-width:450px;
+  position: fixed;
+  top: 0;
+  gap: 10px;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  transition: 0.3s ease;
+}
+.off-screen-menu a{
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-weight: 500;
+}
+.off-screen-menu ul li{
+  list-style: none;
+}
+.off-screen-menu.active{
+  right: 0;
+}
+
   
-  /* Responsive Design */
+
   @media screen and (max-width: 768px) {
     #about-hero h1 {
       font-size: 2.5rem;
+    }
+    .hamburger{
+      display: flex;
     }
   
     #about-hero p {
@@ -80,7 +155,7 @@
       flex-direction: column;
       align-items: center;
       gap: 40px;
-      padding: 20px; /* Ensures padding on mobile devices */
+      padding: 20px; 
     }
   
     .about-content .owner-info {
@@ -95,7 +170,7 @@
   
     .about-content .text {
       text-align: center;
-      padding: 0 10px; /* Adjusted padding for smaller screens */
+      padding: 0 10px;
     }
   }
   
@@ -115,7 +190,7 @@
   
     .about-content .text {
       font-size: 1rem;
-      padding: 0 10px; /* Padding adjustments */
+      padding: 0 10px; 
     }
   
     .about-content img {
@@ -124,8 +199,8 @@
     }
   
     .about-content .owner-info {
-      text-align: center; /* Ensures text is centered */
-      margin-top: 20px; /* Gives space between image and text */
+      text-align: center; 
+      margin-top: 20px; 
     }
   
     .owner-info h3 {

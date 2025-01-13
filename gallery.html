@@ -22,40 +22,43 @@
         <li><a href="gallery.html" class="active">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="burger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
     </nav>
+    <div class="off-screen-menu">
+      <ul><li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li></ul>
+    </div>
   </header>
-
+  <nav class="nav">
+    <div class="hamburger" aria-label="Toggle menu">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </nav>
   <main>
-    <!-- Upload Memories Section -->
-    <section id="upload-section" class="card">
-      <h2>Upload Memories</h2>
-      <p>Share your moments by uploading photos or videos.</p>
-      <form id="upload-form">
-        <input type="file" id="file-input" accept="image/*,video/*" required />
-        <button type="submit">Upload</button>
-      </form>
-    </section>
-
     <!-- Gallery Section -->
-    <section id="gallery-section" class="card">
+    <section class="gallery-container">
       <h2>Gallery</h2>
-      <p>Browse through the moments shared by our community.</p>
-      <div id="gallery" class="gallery-grid">
-        <!-- Uploaded content will appear here -->
+      <p>Experience the vibrant atmosphere and delicious moments of Nani Ki Rasoi through our gallery.</p>
+      <div class="gallery-grid">
+        <img src="./images/bhindi.jpg" alt="Mess Image 1">
+        <img src="./images/aalu .jpg" alt="Mess Image 2">
+        <img src="./images/chawal.jpg" alt="Mess Image 3">
+        <img src="./images/daal.jpg" alt="Mess Image 4">
+        <img src="./images/halwa.jpg" alt="Mess Image 5">
+        <img src="./images/kadhi.jpg" alt="Mess Image 6">
+        <img src="./images/matar daal.jpg" alt="Mess Image 7">
+        <img src="./images/mithisabji.jpg" alt="Mess Image 8">
+        <img src="./images/salald.jpg" alt="Mess Image 9">
+        <img src="./images/WhatsApp Image 2025-01-04 at 23.32.46_bd685eeb.jpg" alt="Mess Image 10">
+        <img src="./images/eans.jpg" alt="Mess Image 1">
+        <img src="./images/raita.jpg" alt="Mess Image 1">
+        <img src="./images/chole bhature.jpg" alt="Mess Image 1">
+        <img src="./images/gulab jamubn.jpg" alt="Mess Image 1">
       </div>
-    </section>
-
-    <!-- Memories Section -->
-    <section id="memories-section" class="card">
-      <h2>Memories</h2>
-      <p>Write about your experiences and save them for everyone to see.</p>
-      <textarea id="memories-text" placeholder="Share your thoughts or memories..."></textarea>
-      <button id="save-memories">Save Memories</button>
     </section>
   </main>
 
@@ -64,9 +67,9 @@
     <div class="footer-content">
       <p>&copy; 2025 Nani Ki Rasoi. All Rights Reserved.</p>
       <div class="social-icons">
-        <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
-        <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
-        <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="insta.png" alt="Instagram"></a>
+        <a href="#"><img src="twitter.png" alt="Twitter"></a>
       </div>
     </div>
   </footer>

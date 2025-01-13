@@ -15,13 +15,7 @@
   <header>
     <nav>
       <div class="logo">
-        <h3>NANI KI RASOI</h3>
-      </div>
-      <!-- Hamburger Icon (Initially hidden on larger screens) -->
-      <div class="burger" id="hamburger">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
+        <h3 id="title">NANI KI RASOI</h3>
       </div>
       <!-- Navigation Menu -->
       <ul class="tag" id="navMenu">
@@ -32,10 +26,25 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="off-screen-menu">
+      <ul><li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li></ul>
+    </div>
   </header>
+  <nav class="nav">
+    <div class="hamburger" aria-label="Toggle menu">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </nav>
 
   <!-- Home Section -->
   <div id="home" class="hero">
+
     <div class="hero-content">
       <h1>Still Hungry?</h1>
       <h2>Welcome to Nani Ki Rasoi</h2>
@@ -68,7 +77,8 @@
         </div>
 
         <div class="cta">
-          <p>Craving a home-cooked meal? <a href="contact.html">Order Now!</a></p>
+          <p>Craving a home-cooked meal? </p>
+          <a href="contact.html">Order Now!</a>
         </div>
       </div>
     </div>
@@ -94,6 +104,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
